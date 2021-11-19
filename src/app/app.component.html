@@ -1,0 +1,61 @@
+<div>
+    <form [formGroup]="userForm">
+      <div class="mt-5 box">
+          <div class="form-row">
+              <div class="col-md-12">
+                  <div class="form-group mt-4">
+                      <label>First</label>
+                  </div>
+                  <div class="form-row" style="margin-top:-10px;">
+                      <div class="col">
+                          <input type="text" formControlName="first" class="form-control" placeholder="First.." required>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-12">
+                  <div class="form-group mt-4">
+                      <label>Middle</label>
+                  </div>
+                  <div class="form-row" style="margin-top:-10px;">
+                      <div class="col">
+                          <input type="text" formControlName="middle" class="form-control" placeholder="Middle..">
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-12">
+                  <div class="form-group mt-4">
+                      <label>Last</label>
+                  </div>
+                  <div class="form-row" style="margin-top:-10px;">
+                      <div class="col">
+                          <input type="text" formControlName="last" class="form-control" placeholder="Last..">
+                      </div>
+                  </div>
+              </div>
+              <div class="form-row mt-4">
+                  <div class="col-md-6">
+                      <button [disabled] ='userForm.invalid'type="button" class="btn btn-primary" (click)="addItem()">Add</button>&nbsp; 
+                  </div>
+              </div>
+          </div>
+      </div>
+  </form>*/
+  <div>
+      <table class="table  table-striped" align="center">
+        <thead>
+            <tr>
+              <th>First</th>
+              <th>middle</th>
+              <th>Last</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor = "let item of listData">
+                  <td><span>{{item.first}}</span></td>
+                  <td><span>{{item.middle}}</span></td>
+                  <td><span>{{item.last}}</span></td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
